@@ -1,0 +1,27 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/add/add",
+    "pages/list/list",
+    "pages/quick/quick",
+    "pages/memo/memo",
+    "pages/store/store",
+    "pages/time/time",
+    "pages/report/report",
+    "pages/anal/anal",
+    "pages/setting/setting",
+    "pages/help/help",
+    "pages/question/question",
+    "pages/about/about",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2b3b49",
+    "navigationBarTitleText": "水酷客户管理平台",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000
+  }
+}

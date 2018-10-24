@@ -1,0 +1,33 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="zan-panel">
+      <view class="zan-panel__title">系统设置</view>
+      <view class="zan-panel__content">
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">列表每页容量</view>
+          <input name="list_size" class="zan-field__input zan-cell__bd" maxlength="2" placeholder="请输入数值" type="number" value="{{setting.list_size}}"/>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">自动客户预测</view>
+          <text class="zan-field__input zan-cell__bd" bindtap="chooseAuto" style="color:{{timeItem[time].color}}">{{timeItem[time].text}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="zan-panel">
+      <view class="zan-panel__title">活动设置</view>
+      <view class="zan-panel__content">
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">购买满送阈值</view>
+          <input name="free" class="zan-field__input zan-cell__bd" maxlength="4" placeholder="请输入数值" type="number" value="{{setting.free}}"/>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">赠品来源库存</view>
+          <text class="zan-field__input zan-cell__bd" bindtap="chooseGift" style="color:{{giftItem[gift].color}}">{{giftItem[gift].text}}</text>
+        </view>
+        <view class="btn-group">
+          <button form-type="submit" class="zan-btn zan-btn--primary">保存</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

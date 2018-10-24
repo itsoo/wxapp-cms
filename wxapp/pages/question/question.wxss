@@ -1,0 +1,2 @@
+.question{box-sizing:border-box}
+.content{flex:1;box-sizing:border-box;padding:.6em;background:#fff;border-radius:2px}

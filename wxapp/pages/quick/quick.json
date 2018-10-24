@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "快速出货",
+  "onReachBottomDistance": 10,
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "zan-stepper": "../../dist/stepper/index"
+  }
+}

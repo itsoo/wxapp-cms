@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="fixed_top" hidden="{{delView}}">
+    <view class="search">
+      <view class="search-col">
+        <view class="search-icon">
+          <icon class="zan-icon zan-icon-search" type="search" size="14"/>
+        </view>
+        <view class="search-input">
+          <input type="text" class="search-bar__input" placeholder="姓名 / 电话 / 地址" value="{{search}}" bindfocus="showInput" bindblur="hideInput" bindinput="inputTyping"/>
+        </view>
+      </view>
+      <view hidden="{{!isShow && search == ''}}" class="search-btn" bindtap="doSearch">搜索</view>
+    </view>
+  </view>
+  <view class="fixed_top" hidden="{{!delView}}">
+    <view class="tool_bar">
+      <view class="left" bindtap="checkAll">全选</view>
+      <view class="right cancel" bindtap="doCancel">取消</view>
+    </view>
+  </view>
+  <view class="cell-group">
+    <checkbox-group bindchange="checkboxChange">
+      <label wx:for="{{dataList}}" wx:key="id" bindtap="navigateTo" bindlongpress="toDelete" id="{{item.id}}" class="zan-cell zan-cell--access" hover-class="row-hover">
+        <checkbox value="{{item.id}}" hidden="{{!delView}}" checked="{{item.checked}}"/>
+        <view class="zan-cell__bd">
+          <view class="zan-cell__text">{{item.name}}</view>
+          <view class="zan-cell__desc">{{item.address}}</view>
+        </view>
+        <view catchtap="callTo" data-phone="{{item.phone}}" class="zan-cell__ft">{{item.phone}}</view>
+      </label>
+    </checkbox-group>
+  </view>
+  <view class="loadmore" hidden="{{!hasNext}}">
+    <view class="loading inline">
+      <view class="circle"/>
+      <view class="loadmore_tips">玩命加载中...</view>
+    </view>
+  </view>
+  <view class="loadmore" hidden="{{hasNext}}">
+    <view class="loading inline">
+      <view class="loadmore_tips">陛下，没有更多了</view>
+    </view>
+  </view>
+  <view class="fixed_bottom" hidden="{{!delView}}">
+    <view class="tool_bar">
+      <view class="left delete" bindtap="doDelete">删除</view>
+      <!-- <view class="right recycle">回收站</view> -->
+    </view>
+  </view>
+</view>

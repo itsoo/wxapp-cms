@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "客户列表",
+  "onReachBottomDistance": 10,
+  "enablePullDownRefresh": true
+}

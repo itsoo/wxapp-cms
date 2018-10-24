@@ -1,0 +1,14 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         updateCheck="true" monitoring="autodetect"
+         dynamicConfig="true">
+    <!-- 存储到临时文件 -->
+    <diskStore path="java.io.tmpdir"/>
+    <!-- wxapp cache 实例 -->
+    <cache name="wxapp"
+           maxElementsInMemory="10000"
+           overflowToDisk="false"
+           eternal="true"
+           maxElementsOnDisk="0"
+           diskPersistent="false"/>
+</ehcache>

@@ -1,0 +1,43 @@
+@import "dist/index.wxss";
+
+.container{background:#F9F9F9;overflow:hidden;min-height:100vh;box-sizing:border-box;padding:0;position:relative}
+.doc-container{background:#F9F9F9;overflow:hidden;min-height:100vh;box-sizing:border-box;padding:15px 0}
+.doc-title{position:relative;padding:15px 0;margin:10px 15px;line-height:25px;font-size:25px;color:#666;border-bottom:1rpx solid #E5E5E5}
+.doc-content{padding:15px;overflow:hidden;color:#666}
+.doc-content--without-pd{padding:15px 0}
+.doc-description{margin:14px 0;padding:0 15px;font-size:14px;line-height:20px;color:#666}
+.fixed_top,
+.fixed_bottom{z-index:9}
+.fixed_top:before,
+.fixed_bottom:before{content:'';display:block;height:52px}
+.fixed_top>view,
+.fixed_bottom>view{position:fixed;left:0;right:0;z-index:9;}
+.fixed_top>view{top:0;box-shadow:0 1px 4px rgba(0,0,0,.1)}
+.fixed_bottom>view{bottom:0;box-shadow:0 -1px 4px rgba(0,0,0,.1)}
+.search{display:flex;padding:10px 15px;background:#F0F0F0}
+.search .search-col,
+.search .search-icon,
+.search .search-input{height:22px;line-height:22px;border-radius:4px;background:#FFF;font-size:16px}
+.search .search-col{display:flex;flex:1;padding:5px}
+.search .search-icon{width:24px;line-height:24px;vertical-align:middle;text-align:center}
+.search .search-input{flex:1;color:#666}
+.search .search-btn{margin-left:15px;color:#0C0;font-size:16px;height:32px;line-height:32px;opacity:1;outline:none}
+.search .search-btn:active{opacity:0.8;background:transparent}
+.tool_bar{display:flex;padding:10px 15px;background:#F0F0F0}
+.tool_bar>view{flex:1;font-size:16px;height:32px;line-height:32px}
+.tool_bar .left{text-align:left}
+.tool_bar .right{text-align:right}
+.tool_bar .cancel{color:#999}
+.tool_bar .delete{color:#C00}
+.tool_bar .recycle{color:#666;font-size:14px}
+.footer{color:#999;font-size:14px;text-align:center;padding:20px 0 10px}
+.absolute-bottom>view{position:absolute;bottom:0;left:0;right:0}
+.absolute-bottom:before{content:'';display:block;height:65px}
+.footer_links{font-size:0}
+.footer__link{display:inline-block;vertical-align:top;margin:0 18rpx;position:relative;font-size:14px;color:#586C94;padding:0 6rpx}
+.footer__link:before{content:'';position:absolute;width:1px;border-left:1rpx solid #C7C7C7;color:#C7C7C7;left:-18rpx;top:6rpx;bottom:6rpx}
+.footer__link:first-child:before{display:none}
+.footer__text{padding:10rpx;font-size:12px;font-style:italic}
+.loadmore .loadmore_tips{font-size:12px;margin-left:.6em;color:#999;line-height:24px}
+navigator{opacity:1;outline:none}
+navigator:active{opacity:0.8;background:transparent}

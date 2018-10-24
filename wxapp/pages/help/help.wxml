@@ -1,0 +1,95 @@
+<view class="doc-container">
+  <view class="doc-title">帮助手册</view>
+  <view class="doc-content doc-content--without-pd">
+    <view class="zan-panel">
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan-pull-right">请稍微花一点时间来学习</view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">1. 新增客户</view>
+          <view class="zan-c-gray-darker">
+            <view>· 客户的基本信息为必填项，其他为选填项</view>
+            <view>· 客户信息确认无误后，可点击<text class="zan-c-green">保存</text>按钮</view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">2. 客户列表</view>
+          <view class="zan-c-gray-darker">
+            <view>· 点击列表条目跳转到编辑用户页面</view>
+            <view>· 点击蓝色电话部分可呼叫该客户</view>
+            <view>· 长按任意条目进入批量删除状态</view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">3. 快速出货</view>
+          <view class="zan-c-gray-darker">
+            <view>· 点击 '+' 号可实现快速增加出货量的操作</view>
+            <view>· 系统将自动为您计算客户是否享受赠送优惠</view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">4. 我的便签</view>
+          <view class="zan-c-gray-darker">
+            <view>· 方便实用的一页电子纸（快速记录备忘）</view>
+            <view>· 当便签中存在内容时首页加入小红点提醒</view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">5. 库存预警</view>
+          <view class="zan-c-gray-darker">
+            <view>· 平台自动化预测并计算当前库存量</view>
+            <view>· 通过进货数量您可以按批次的管理库存</view>
+            <view>· 库存数量可以在首页做自定义提醒</view>
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">6. 需求预测</view>
+          <view class="zan-c-gray-dark">
+            该功能模块持续建设中
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">7. 统计报表</view>
+          <view class="zan-c-gray-dark">
+            该功能模块持续建设中
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">8. 客户分析</view>
+          <view class="zan-c-gray-dark">
+            该功能模块持续建设中
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">9. 系统设置</view>
+          <view class="zan-c-gray-darker">
+            <view>· 您的个性化的设置都保存在这里</view>
+            <view>· 支持列表页容量设置</view>
+            <view>· 客户预测默认为<text class="zan-c-green">开启</text>（需求预测功能）</view>
+            <view>· 购买满送阈值设置</view>
+            <view>· 赠品来源的设置（赠送是否减少库存）</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

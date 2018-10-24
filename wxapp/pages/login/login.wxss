@@ -1,0 +1,6 @@
+.container{background:#2b3b49;overflow:hidden}
+.text{color:#dedede;font-size:16px;text-align:center;height:500rpx;line-height:500rpx}
+.func{display:block;box-sizing:content-box;margin:0 auto;font-size:18px;width:36px;height:36px;line-height:1em;padding:30px;background:#ddd;color:#0b3;border-radius:50%}
+.func:active{opacity:0.8}
+.error{height:36px;line-height:36px;padding:30px;font-size:14px;color:#dedede;text-align:center}
+.footer_link{color:#dedede}

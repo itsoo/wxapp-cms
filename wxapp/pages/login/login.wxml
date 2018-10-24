@@ -1,0 +1,10 @@
+<view class="container">
+	<view class="text">您还未登录，请登录后使用</view>
+	<button wx:if="{{canIUse}}" class="func" hover-class="none" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">立即登录</button>
+	<view wx:else class="error">{{errorMsg}}</view>
+	<view class="absolute-bottom">
+    <view class="footer">
+      <view class="footer__text">{{footerDetail}}{{myPhone}}</view>
+    </view>
+  </view>
+</view>

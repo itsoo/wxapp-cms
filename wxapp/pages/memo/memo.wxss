@@ -1,0 +1,2 @@
+.memo{box-sizing:border-box;padding:0 15px}
+.content{flex:1;box-sizing:border-box;padding:.6em;background:#fff;border-radius:2px}

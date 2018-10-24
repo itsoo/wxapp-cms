@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>水酷客户管理平台</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./asset/css/layui.css" media="all">
+    <link rel="stylesheet" href="./asset/css/global.css" media="all">
+</head>
+<body>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <h1 class="logo">水酷客户管理平台</h1>
+            <ul class="layui-nav layui-nav-tree">
+                <li class="layui-nav-item">
+                    <a href=""><i class="layui-icon layui-icon-user"></i> 用户管理</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href=""><i class="layui-icon layui-icon-help"></i> 问题反馈</a>
+                </li>
+            </ul>
+            <a class="logout" href="./admin/logout">
+                <i class="layui-icon layui-icon-more-vertical"></i> 注销
+            </a>
+        </div>
+    </div>
+    <div class="layui-body">
+        <!-- 主体内容 -->
+        <div class="main">
+            <div class="tools">
+                
+            </div>
+            <table id="datagrid" class="layui-table"></table>
+            <script type="text/html" id="tool">
+                <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="disable">禁用</a>
+                <a class="layui-btn layui-btn-xs" lay-event="disable">启用</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+        </div>
+    </div>
+    <script src="./asset/layui.js" charset="utf-8"></script>
+    <script>
+        layui.use(['layer', 'table'], function () {
+            // layer.msg('提示框')
+            let table = layui.table;
+            // 数据表格实例
+            table.render({
+                elem: '#datagrid'
+                ,height: 400
+                ,cellMinWidth: 80
+                ,url: './admin/user/' // 数据接口
+                ,page: true // 开启分页
+                ,cols: [[ // 表头
+                    {field: 'id', title: 'ID', checkbox: true, fixed: 'left'}
+                    ,{field: 'name', title: '昵称'}
+                    ,{field: 'state', title: '状态', templet: function (d) {
+                        if (d.state == 0) return '正常';
+                        else if (d.state == 1) return '禁用';
+                        else if (d.state == 2) return '试用';
+                        return '未知'
+                    }}
+                    ,{field: 'last_time', title: '最后登录时间'}
+                    ,{fixed: 'right', title: '操作', align: 'center', toolbar: '#tool'}
+                ]]
+                ,request: {
+                    pageName: 'pageNumber' // 页码
+                    ,limitName: 'pageSize' // 每页数据量
+                }
+                ,response: {
+                    statusCode: 200 // 状态码
+                    ,countName: 'totalRow' // 数据总数
+                    ,dataName: 'list' // 数据列表
+                }
+            });
+            // 监听工具条
+            table.on('tool(demo)', function(obj){
+                var data = obj.data;
+                if(obj.event === 'detail'){
+                    layer.msg('ID：'+ data.id + ' 的查看操作');
+                } else if(obj.event === 'del'){
+                    layer.confirm('真的删除行么', function(index){
+                        obj.del();
+                        layer.close(index);
+                    });
+                } else if(obj.event === 'edit'){
+                    layer.alert('编辑行：<br>'+ JSON.stringify(data))
+                }
+            });
+        })
+    </script>
+</div>
+</body>
+</html>

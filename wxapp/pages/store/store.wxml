@@ -1,0 +1,28 @@
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="zan-panel">
+      <view class="zan-panel__title">库存信息</view>
+      <view class="zan-panel__content">
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">当前库存</view>
+          <text class="zan-field__input zan-cell__bd">{{store.now_num}}</text>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">进货数量</view>
+          <input name="buy_num" class="zan-field__input zan-cell__bd" maxlength="4" placeholder="请输入进货数量" type="number"/>
+        </view>
+      </view>
+    </view>
+    <view class="zan-panel__title">预警阈值</view>
+    <view class="zan-panel__content">
+      <view class="zan-cell zan-field">
+        <text class="label zan-field__title">小于</text>
+        <input name="warn_num" class="number zan-field__input" maxlength="3" placeholder="请输入数值" type="number" value="{{store.warn_num}}"/>
+        <input name="warn_text" class="text zan-field__input" maxlength="10" placeholder="请输入提醒文字" type="text" value="{{store.warn_text}}"/>
+      </view>
+      <view class="btn-group">
+        <button form-type="submit" class="zan-btn zan-btn--primary">保存</button>
+      </view>
+    </view>
+  </form>
+</view>

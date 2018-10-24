@@ -1,0 +1,13 @@
+.row{padding:30px 10px 10px;display:flex;flex-wrap:wrap}
+.icon-wrap{flex:1;text-align:center}
+.example-icon{position:relative;font-size:22px;padding:8px;color:#fff;background:#ddd;width:40px;height:40px;line-height:1.8em;margin:0 auto;border-radius:4px}
+.add{background:#39f}
+.list{background:#0b3}
+.quick{background:#f60}
+.memo{background:#fc0}
+.store{background:#c7c}
+.time{background:#0bb}
+.rpt{background:#99c}
+.anal{background:#999}
+.set{color:#999}
+.icon-classname{color:#666;font-size:14px;margin-top:4px}

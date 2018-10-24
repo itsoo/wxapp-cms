@@ -1,0 +1,20 @@
+<view class="zan-stepper {{ size === 'small' ? 'zan-stepper--small' : '' }}">
+  <view
+    class="zan-stepper__minus {{ stepper <= min ? 'zan-stepper--disabled' : '' }}"
+    data-disabled="{{ stepper <= min }}"
+    bindtap="handleZanStepperMinus"
+  >-</view>
+  <input
+    class="zan-stepper__text"
+    type="number"
+    value="{{ stepper }}"
+    disabled="{{ min >= max }}"
+    bindblur="handleZanStepperBlur"
+    disabled="true"
+  />
+  <view
+    class="zan-stepper__plus {{ stepper >= max ? 'zan-stepper--disabled' : '' }}"
+    data-disabled="{{ stepper >= max }}"
+    bindtap="handleZanStepperPlus"
+  >+</view>
+</view>

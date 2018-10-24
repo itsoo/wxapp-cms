@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="zan-toptips {{isShow ? 'zan-toptips--show' : ''}}">至少填下基本信息吧</view>
+  <form bindsubmit="formSubmit">
+    <view class="zan-panel">
+      <view class="zan-panel__title">基本信息</view>
+      <view class="zan-panel__content">
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">姓名</view>
+          <input name="name" class="zan-field__input zan-cell__bd" maxlength="30" placeholder="请输入姓名" type="text" value="{{custom.name}}"/>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">电话</view>
+          <input name="phone" class="zan-field__input zan-cell__bd" maxlength="15" placeholder="请输入电话" type="number" value="{{custom.phone}}"/>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">地址</view>
+          <input name="address" class="zan-field__input zan-cell__bd" maxlength="200" placeholder="请输入地址" type="text" value="{{custom.address}}"/>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">单价</view>
+          <input name="price" class="zan-field__input zan-cell__bd" maxlength="6" placeholder="请输入单价" type="digit" value="{{custom.price}}"/>
+        </view>
+      </view>
+      <view class="zan-panel__title">附加信息</view>
+      <view class="zan-panel__content">
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">数量</view>
+          <input wx:if="{{!custom.id}}" name="Count" class="zan-field__input zan-cell__bd" maxlength="4" placeholder="请输入数量" type="number"/>
+          <text wx:else class="zan-field__input zan-cell__bd">{{custom.Count}}</text>
+        </view>
+        <view class="zan-cell zan-cell__top zan-field">
+          <view class="zan-cell__hd zan-field__title">备注</view>
+          <textarea name="remark" class="zan-field__textarea zan-cell__bd" placeholder="请输入备注信息" style="height:3.3em" value="{{custom.remark}}"/>
+        </view>
+        <view class="label-list">
+          <view class="label" wx:for="{{label}}" wx:key="*this">
+            <text>{{item}}</text>
+            <icon size="14" type="clear" color="#ff3939" data-i="{{index}}" bindtap="removeLabel"/>
+          </view>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__bd">
+            <input class="zan-field__input" bindinput="inputLabling" placeholder="请输入标签名称" value="{{addLabel}}"/>
+          </view>
+          <view class="zan-cell__ft">
+            <view class="add-btn" bindtap="addLabel" hover-class="add-btn-hover">添加标签</view>
+          </view>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">押金</view>
+          <text class="zan-field__input zan-cell__bd" bindtap="chooseDeposit" style="color:{{hasDeposit[deposit].color}}">{{hasDeposit[deposit].text}}</text>
+        </view>
+        <view class="zan-cell zan-field">
+          <view class="zan-cell__hd zan-field__title">空桶</view>
+          <text class="zan-field__input zan-cell__bd" bindtap="chooseGoods" style="color:{{hasGoods[goods].color}}">{{hasGoods[goods].text}}</text>
+        </view>
+        <view class="btn-group">
+          <button form-type="submit" class="zan-btn zan-btn--primary">保存</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

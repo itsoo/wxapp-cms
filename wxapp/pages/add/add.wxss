@@ -1,0 +1,63 @@
+.zan-cell__top {
+  align-items:flex-start;
+  padding:15px;
+}
+.label-list {
+  position: relative;
+  padding-right: 12px;
+  line-height:1;
+}
+.label-list .label {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 5px;
+  background: #efefef;
+  color:#666;
+  margin: 12px 0 0 12px;
+  line-height: 1;
+}
+.label-list .label::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.label-list .label text {
+  display: block;
+  height: 14px;
+  line-height: 14px;
+  float: left;
+  font-size: 12px;
+  margin-right: 6px;
+}
+.label-list .label icon {
+  display: block;
+  float: left;
+}
+.switch_group {
+  position: relative;
+  padding: 12px 15px;
+}
+.switch_label {
+  display: flex;
+  height: 36px;
+  line-height: 36px;
+  overflow: hidden;
+}
+.switch__title {
+  min-width: 65px;
+  padding-right: 10px;
+  font-size: 14px
+}
+.switch {
+  padding: 0;
+  margin-top: -2px;
+  vertical-align: top;
+}
+.add-btn {
+  color: #39f
+}
+.add-btn-hover {
+  opacity: 0.8;
+  background: transparent
+}

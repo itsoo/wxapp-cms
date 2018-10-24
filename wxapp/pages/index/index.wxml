@@ -1,0 +1,109 @@
+<view class="container">
+  <view class="search">
+    <view class="search-col">
+      <view class="search-icon">
+        <icon class="zan-icon zan-icon-search" type="search" size="14"/>
+      </view>
+      <view class="search-input">
+        <input type="text" class="search-bar__input" placeholder="姓名 / 电话 / 地址" value="{{search}}" bindfocus="showInput" bindblur="hideInput" bindinput="inputTyping"/>
+      </view>
+    </view>
+    <view hidden="{{!showed && search == ''}}" class="search-btn" bindtap="doSearch">搜索</view>
+  </view>
+  <view class="noticebar" wx:if="{{bar.showed}}">
+    <zan-panel>
+      <zan-noticebar text="{{bar.text}}" scrollable="{{bar.scrollable}}"/>
+    </zan-panel>
+  </view>
+  <view class="row">
+    <view class="icon-wrap">
+      <navigator url="../add/add" hover-class="none">
+        <view class="example-icon add">
+          <view class="zan-icon zan-icon-contact"/>
+        </view>
+      </navigator>
+      <view class="icon-classname">新增客户</view>
+    </view>
+    <view class="icon-wrap">
+      <navigator url="../list/list" hover-class="none">
+        <view class="example-icon list">
+          <view class="zan-icon zan-icon-exchange"/>
+        </view>
+      </navigator>
+      <view class="icon-classname">客户列表</view>
+    </view>
+    <view class="icon-wrap">
+      <navigator url="../quick/quick" hover-class="none">
+        <view class="example-icon quick">
+          <view class="zan-icon zan-icon-cart"/>
+        </view>
+      </navigator>
+      <view class="icon-classname">快速出货</view>
+    </view>
+  </view>
+  <view class="row">
+    <view class="icon-wrap">
+      <navigator url="../memo/memo" hover-class="none">
+        <view class="example-icon memo">
+          <view class="zan-icon zan-icon-edit"/>
+          <view hidden="{{memoWarn}}" class="zan-badge__text zan-badge__text_sm"></view>
+        </view>
+      </navigator>
+      <view class="icon-classname">我的便签</view>
+    </view>
+    <view class="icon-wrap">
+      <navigator url="../store/store" hover-class="none">
+        <view class="example-icon store">
+          <view class="zan-icon zan-icon-shop"/>
+          <view hidden="{{warnText == ''}}" class="zan-badge__text">{{warnText}}</view>
+        </view>
+      </navigator>
+      <view class="icon-classname">库存预警</view>
+    </view>
+    <view class="icon-wrap">
+      <navigator url="../time/time" hover-class="none">
+        <view class="example-icon time">
+          <view class="zan-icon zan-icon-clock"/>
+          <!-- <view class="zan-badge__text">1</view> -->
+        </view>
+      </navigator>
+      <view class="icon-classname">需求预测</view>
+    </view>
+  </view>
+  <view class="row">
+    <view class="icon-wrap">
+      <navigator url="../report/report" hover-class="none">
+        <view class="example-icon rpt">
+          <view class="zan-icon zan-icon-points"/>
+        </view>
+      </navigator>
+      <view class="icon-classname">统计报表</view>
+    </view>
+    <view class="icon-wrap">
+      <navigator url="../anal/anal" hover-class="none">
+        <view class="example-icon anal">
+          <view class="zan-icon zan-icon-logistics"/>
+        </view>
+      </navigator>
+      <view class="icon-classname">客户分析</view>
+    </view>
+    <view class="icon-wrap">
+      <navigator url="../setting/setting" hover-class="none">
+        <view class="example-icon set">
+          <view class="zan-icon zan-icon-setting"/>
+        </view>
+      </navigator>
+      <view class="icon-classname">系统设置</view>
+    </view>
+  </view>
+  <view class="absolute-bottom">
+    <view class="footer">
+      <view class="footer_links">
+        <navigator url="../help/help" class="footer__link">帮助手册</navigator>
+        <navigator url="../question/question" class="footer__link">问题反馈</navigator>
+        <navigator url="../about/about" class="footer__link">关于我们</navigator>
+      </view>
+      <view class="footer__text">{{footerDetail}}{{myPhone}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+<view class="doc-container">
+  <view class="doc-title">关于我们</view>
+  <view class="doc-content doc-content--without-pd">
+    <view class="zan-panel">
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan-pull-right">服务客户，合作双赢</view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">1. 平台简介</view>
+          <view class="zan-c-gray-darker">
+            本平台是创新的一站式客户资源管理平台，基于微信小程序开发设计（无需安装App是即用即走的最佳实现）。本平台致力于客情跟踪与管理，以帮助企业提高生产为己任、为解决时效问题而设计，是助力办公的优秀解决方案。
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">2. 使用及授权</view>
+          <view class="zan-c-gray-darker">
+            关于本平台的使用您需要了解的是：本平台为助力中小企业办公的商用平台，需要授权付费使用，作者及平台应用服务提供商有权依法追究法律责任，并保留平台运营相关的最终解释权。
+          </view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan__title">3. 维护与开发</view>
+          <view class="zan-c-gray-darker">
+            系统平台统一由供应商提供云计算应用服务器，客户无需困扰平台安装与维护等繁杂的问题。关于二次开发的需求与研发成本等，有任何疑问的请致电：<text class="zan-c-blue" bindtap="callMe">18360450700</text>（张先生）询问详情。
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

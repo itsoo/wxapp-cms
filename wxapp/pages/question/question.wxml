@@ -1,0 +1,18 @@
+<view class="doc-container">
+  <view class="doc-title">问题反馈</view>
+  <view class="doc-content doc-content--without-pd">
+    <view class="zan-panel">
+      <view bindtap="cellTap" class="zan-cell last-cell">
+        <view class="zan-cell__bd">
+          <view class="zan-pull-right">我们将火速为您解决问题</view>
+        </view>
+      </view>
+      <view bindtap="cellTap" class="zan-cell last-cell question">
+        <textarea class="zan-field__textarea content" maxlength="-1" placeholder="请尽量详细的描述您所遇到的问题" style="height:9.9em"/>
+      </view>
+      <view class="btn-group">
+        <button class="zan-btn zan-btn--primary">我要吐槽</button>
+      </view>
+    </view>
+  </view>
+</view>

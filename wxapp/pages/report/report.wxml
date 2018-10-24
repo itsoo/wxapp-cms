@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="zan-panel">
+    <view class="zan-panel__title">友情提醒</view>
+    <view class="zan-panel__content">
+      <view class="zan-cell zan-field">
+        <view class="zan-cell__hd zan-field__title">该功能暂未开放，码农正火速搬砖...</view>
+      </view>
+    </view>
+  </view>
+</view>
